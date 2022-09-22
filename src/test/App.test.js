@@ -4,5 +4,5 @@ import App from '../App';
 test('Renderiza en Pantalla', () => {
   render(<App />);
   const startCount = screen.queryByTestId("click");
-  expect(startCount).toBeDefined()
+  expect(startCount).toBeDefined() 
 });
