@@ -3,6 +3,6 @@ import App from '../App';
 
 test('Renderiza en Pantalla', () => {
   render(<App />);
-  const startCount = screen.queryByTestId("click");
-  expect(startCount).toBeDefined() 
+  const startCount = screen.getByText("You clicked 0 times");
+  expect(startCount).toBeTruthy(); 
 });
