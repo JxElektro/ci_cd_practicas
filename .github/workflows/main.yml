@@ -15,6 +15,17 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
+
+ lint:
+  name: Check the source code
+    runs-on: ubuntu-latest
+    steps:
+        uses: actions/checkout@v3
+      - name: Install packages
+        run: npm i
+      - name: lint
+        run: npm test lint
+
   test: # step para testear nuestra app react
     runs-on: ubuntu-latest
     steps:
